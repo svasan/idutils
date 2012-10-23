@@ -1042,7 +1042,7 @@ query_ambiguous_prefix (unsigned int limit, report_func_t report_func)
 	{
 	  if (consecutive && key_style != ks_token)
 	    {
-	      strncpy (&name[1], old, limit);
+	      stzncpy (&name[1], old, limit - 2);
 	      (*report_func) (name, bits_to_flinkv (bits_vec));
 	    }
 	  consecutive = 0;
@@ -1064,7 +1064,7 @@ query_ambiguous_prefix (unsigned int limit, report_func_t report_func)
     }
   if (consecutive && key_style != ks_token)
     {
-      strncpy (&name[1], new, limit);
+      stzncpy (&name[1], new, limit - 2);
       (*report_func) (name, bits_to_flinkv (bits_vec));
     }
   return count;

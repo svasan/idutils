@@ -46,11 +46,7 @@ root_name (char const *file_name)
   char const *dot = strrchr (file_name, '.');
 
   if (dot)
-    {
-      int length = dot - file_name;
-      strncpy (file_name_buffer, file_name, length);
-      file_name_buffer[length] = '\0';
-    }
+    stzncpy (file_name_buffer, file_name, dot - file_name);
   else
     strcpy (file_name_buffer, file_name);
   return file_name_buffer;
