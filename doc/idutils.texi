@@ -36,8 +36,7 @@ END-INFO-DIR-ENTRY
 @copying
 This file documents the @file{idutils} database utilities.
 
-Copyright @copyright{} 1996, 1999-2000, 2008-2012, 2014 Free Software Foundation,
-Inc.
+Copyright @copyright{} 1996-2014 Free Software Foundation, Inc.
 
 @quotation
 Permission is granted to copy, distribute and/or modify this document
