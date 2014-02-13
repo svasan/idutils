@@ -36,7 +36,7 @@ END-INFO-DIR-ENTRY
 @copying
 This file documents the @file{idutils} database utilities.
 
-Copyright @copyright{} 1996, 1999-2000, 2008-2012 Free Software Foundation,
+Copyright @copyright{} 1996, 1999-2000, 2008-2012, 2014 Free Software Foundation,
 Inc.
 
 @quotation
@@ -75,8 +75,8 @@ This manual documents version @value{VERSION} of the ID utilities.
 * mkid invocation::             Creating an ID database.
 * lid invocation::              Querying an ID database by token.
 * fid invocation::              Listing a file's tokens.
-* gid invocation::              Token-based grep
 * fnid invocation::             Looking up file names.
+* gid invocation::              Token-based grep
 * xtokid invocation::           Testing language scanners.
 * Past and Future::             History and future directions.
 * Index::                       General index.
@@ -164,23 +164,29 @@ sometimes difficult to infer.  @xref{Bugs, , , gcc, GNU CC}.
 @node Quick start
 @chapter Quick Start Procedure
 
-@table @bullet
+@itemize @bullet
 
+@item
 Unpack the distribution.
 
+@item
 Type @file{./configure}
 
+@item
 Type @samp{make}
 
+@item
 Type @samp{make install} as a user with the appropriate privileges
 (e.g., @samp{bin} or perhaps even @samp{root}).
 
+@item
 Type @samp{cd /usr/include; mkid} to build an ID database covering
 all of the system header files.
 
+@item
 Type @samp{lid FILE}, then @samp{gid strtok}, then @samp{aid stdout}.
 
-@end table
+@end itemize
 
 You have just built, installed and used the most common commands of the
 GNU ID utilities.  If you ever need help remembering which system header
@@ -202,11 +208,11 @@ rather than repeating them for each program.
 
 @menu
 * Universal options::     Options common to all programs.
-* Extraction options::    Options for programs that extract tokens from source files.
-* Walker options::        Options for programs that walk file and directory trees.
 * Reading options::       Options for programs that read ID databases.
 * Writing options::       Options for programs that write ID databases.
+* Walker options::        Options for programs that walk file and directory trees.
 * File listing options::  Options for programs that list file names.
+* Extraction options::    Options for programs that extract tokens from source files.
 @end menu
 
 @c ************* gkm *********************************************************
@@ -311,7 +317,7 @@ One or more file or directory names may appear in @var{names}.  The file
 tree walker will stop short at these files and directories and their
 contents will not be scanned.
 
-@itemx --files0-from=@var{FILE}
+@item --files0-from=@var{FILE}
 @opindex --files0-from=@var{FILE}
 Rather than processing files named on the command line, process those
 named in file @var{FILE}; each name is terminated by a null byte.
@@ -1357,16 +1363,19 @@ with the other GNU package names.
 @cindex future
 Future releases of @code{idutils} might include:
 
-@table @bullet
+@itemize @bullet
 
+@item
 an optional coupling with GNU @code{grep}, so that @code{grep} can use
 an ID database for hints
 
+@item
 a @code{cscope} work-alike query interface
 
+@item
 incremental update of the ID database.
 
-@end table
+@end itemize
 
 @c ***************************************************************************
 @node Index
